@@ -1,6 +1,5 @@
 ---
 title: Troubleshooting network services in Linux
-page.next: introduction.md
 ---
 
 # Troubleshooting network services in Linux
@@ -15,6 +14,9 @@ In this guide, I try to compile everything I know about troubleshooting network 
     2. [The Internet layer](internet-layer.md)
     3. [The Transport layer](transport-layer.md)
     4. [The Application layer](application-layer.md)
+        - BIND (TODO)
+        - DHCP (TODO)
+        - Samba (TODO)
 - Special topics
     - [Troubleshooting VirtualBox networking](virtualbox-networking.md)
     - Troubleshooting SELinux (TODO)
