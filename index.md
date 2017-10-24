@@ -11,10 +11,13 @@ In this guide, I try to compile everything I know about troubleshooting network 
 
 - [Introduction](introduction.md)
 - Bottom-up troubleshooting
-    1. The Physical and Network Access layer
-    2. The Internet layer
-    3. The Transport layer
-    4. The Application layer
+    1. [The Physical and Network Access layer](link-layer.md)
+    2. [The Internet layer](internet-layer.md)
+    3. [The Transport layer](transport-layer.md)
+    4. [The Application layer](application-layer.md)
+- Special topics
+    - [Troubleshooting VirtualBox networking](virtualbox-networking.md)
+    - Troubleshooting SELinux (TODO)
 - [TL;DR checklist](tldr-checklist.md)
 
 ## License
@@ -25,8 +28,8 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
 
 ## Contributors
 
-Issues, feature requests, ideas, suggestions, etc. are appreciated and can be posted in the Issues section.
+Feedback like reporting typos or errors, feature requests, ideas, suggestions, etc. are appreciated and can be posted in the [Issues section](https://github.com/bertvv/linux-network-troubleshooting/issues).
 
-Pull requests are also very welcome. Please create a topic branch for your proposed changes. If you don’t, this will create conflicts in your fork when you synchronise changes after the merge. Don’t hesitate to add yourself to the contributor list below in your PR!
+[Pull requests](https://github.com/bertvv/linux-network-troubleshooting/pulls) are also very welcome. Please create a topic branch for your proposed changes. If you don’t, this will create conflicts in your fork when you synchronise changes after the merge. Don’t hesitate to add yourself to the contributor list below in your PR!
 
 - [Bert Van Vreckem](https://github.com/bertvv/) (maintainer)
