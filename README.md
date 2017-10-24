@@ -1,6 +1,5 @@
 ---
 title: Troubleshooting network services in Linux
-page.next: introduction.md
 ---
 
 # Troubleshooting network services in Linux
