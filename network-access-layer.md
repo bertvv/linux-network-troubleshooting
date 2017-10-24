@@ -1,4 +1,4 @@
-# Physical and data link layer
+# Physical and Network Access layer
 
 
 In this phase, we check the network hardware, specifically network cables and ports.

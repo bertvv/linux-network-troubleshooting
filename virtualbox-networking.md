@@ -52,7 +52,7 @@ I suggest to leave the default host-only interface as is, and create new interfa
     - Does the host system have an IP address in the form 192.168.NNN.1?
     - Is the DHCP server activated and configured consistently with the IP address of the host system?
 2. Check whether the host system actually has the expected IP address
-3. During the Link Layer phase, check the VM network adapters (VM Settings > Network)
+3. During the Data Access Layer phase, check the VM network adapters (VM Settings > Network)
     - Is the adapter enabled?
     - Is the cable connected (hidden setting under "advanced")
     - Is it attached to the correct host-only network?

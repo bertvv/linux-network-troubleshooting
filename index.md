@@ -11,7 +11,7 @@ In this guide, I try to compile everything I know about troubleshooting network 
 
 - [Introduction](introduction.md)
 - Bottom-up troubleshooting
-    1. [The Physical and Network Access layer](link-layer.md)
+    1. [The Physical and Network Access layer](network-access-layer.md)
     2. [The Internet layer](internet-layer.md)
     3. [The Transport layer](transport-layer.md)
     4. [The Application layer](application-layer.md)
