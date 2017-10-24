@@ -33,3 +33,6 @@ A few best practices when setting up and troubleshooting network services:
 * **Automate** your tests (Shell script, [BATS](https://github.com/sstephenson/bats) test script, Ansible playbook, Serverspec, etc.)
 * **Error messages** usually give a clue of where to look and may provide a shortcut in the troubleshooting process. Look for the error message in the logs or returned by client software and know how to interpret them.
 
+And finally
+
+* **DO NOT `ping www.google.com`!!!**. Too many conditions need to be fulfilled for this command to succeed, so it is never a good troubleshooting command.
