@@ -28,7 +28,7 @@ The VirtualBox [host-only adapter](http://www.virtualbox.org/manual/ch06.html#ne
 
 A host-only interface is named:
 
-- On Linux: `vboxnet0`, `vboxnet1`, ...
+- On Linux/MacOS: `vboxnet0`, `vboxnet1`, ...
 - On Windows: "VirtualBox Host-only Ethernet Interface". "VirtualBox Host-only Ethernet Interface #2", ...
 
 The **default settings** for a host-only interface are:
@@ -48,15 +48,17 @@ I suggest to leave the default host-only interface as is, and create new interfa
 
 ### Checklist:
 
-1. Check host-only network configuration: VirtualBox main window > File > Preferences > Network > Host-only Networks
+1. Check host-only network configuration: VirtualBox main window > File > Preferences > Network > Host-only Networks:
+    - Are there any host-only adapters defined? If not, create one and check if the settings are as expected (see above)
     - Does the host system have an IP address in the form 192.168.NNN.1?
+        - If the host system has a zeroconf/APIPA address (range 196.254.0.0/16), there is a problem with the Host-only network adapter settings: probably the value of the field "IPv4 Address" conflicts with an already assigned IP address on another interface.
     - Is the DHCP server activated and configured consistently with the IP address of the host system?
-2. Check whether the host system actually has the expected IP address
-3. During the Data Access Layer phase, check the VM network adapters (VM Settings > Network)
+2. During the **Data Access Layer phase**, check the VM network adapters (VM Settings > Network)
     - Is the adapter enabled?
     - Is the cable connected (hidden setting under "advanced")
     - Is it attached to the correct host-only network?
-4. During the Network Layer phase, in the VM, check the IP address of the adapter connected to the host-only network
+3. During the **Network Layer phase**, in the VM, check the IP address of the adapter connected to the host-only network
     - Is it e.g. 192.168.56.101 (default host-only network, first IP address assigned by DHCP)
     - Is it e.g. 192.168.56.NN (with 2 <= NN <= 99, if you assigned a fixed IP address)
-5. Also during the Network Layer phase, ping the VM from your host system and vice versa. Remark that pinging the host system from the VM may not always work, e.g. if the firewall on the host system is configured to block ICMP traffic.
+    - Does the host system have an IP address on that host-only network within the same IP network? Check the network mask as well!
+4. Also during the **Network Layer phase**, ping the VM from your host system and vice versa. Remark that pinging the host system from the VM may not always work, e.g. if the firewall on the host system is configured to block ICMP traffic.
