@@ -14,7 +14,7 @@ In this guide, I try to compile everything I know about troubleshooting network 
     2. [The Internet layer](internet-layer.md)
     3. [The Transport layer](transport-layer.md)
     4. [The Application layer](application-layer.md)
-        - BIND (TODO)
+        - [BIND](bind.md)
         - DHCP (TODO)
         - Samba (TODO)
 - Special topics
