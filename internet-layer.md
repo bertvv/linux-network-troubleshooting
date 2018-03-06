@@ -16,7 +16,39 @@ Before "reaching out" to other hosts, first check local settings.
 
 ### IP address
 
+#### Configuration
+
 The IP address may have been set automatically (DHCP), or manually. Check this in `/etc/sysconfig/network-scripts/ifcfg-IFACE`, with IFACE the name of the network interface.
+
+This is an exerpt from a network interface configuration file configured to use DHCP:
+
+```
+DEVICE="enp0s3"
+ONBOOT="yes"
+BOOTPROTO="dhcp"
+```
+
+Things to check:
+
+- `DEVICE` should be the interface name
+- `ONBOOT` should be `yes`, or the interface will not attempt to activate the interface on boot, or when restarting the network interfaces (`systemctl restart network`)
+- `BOOTPROTO` should be set to `dhcp`
+
+If a fixed IP address is set, the configuration should look like this:
+
+```
+DEVICE=enp0s8
+ONBOOT=yes
+BOOTPROTO=none
+IPADDR=192.168.56.24
+NETMASK=255.255.255.0
+```
+
+- `DEVICE` and `ONBOOT` like in the previous example
+- `BOOTPROTO` should be `none`
+- `IPADDR` and `NETMASK` must be specified
+
+#### Actual value
 
 Use the command `ip address` (or shortcut `ip a`) to list the IP addresses for each interface.
 
